@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Board</title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        
+        <link rel="stylesheet" href="style.css">
+
+        <script src="https://kit.fontawesome.com/2b977b57a3.js" crossorigin="anonymous"></script>
+
+        <script defer src="main.js"></script>
+
+</head>
+
+<body>
+    <section class="layout-container">
+
+        <header>
+            <h1>My Task Board</h1>
+        </header>
+
+        <form onsubmit="addNote()">
+
+            <div class="description-container">
+                <label for="taskDescription">Task: </label>
+                <br>
+                <textarea name="taskDescription" id="descriptionText" cols="" rows="" placeholder="Enter new task..." required></textarea>
+            </div>
+
+            <div class="dateTime-container">
+                <label for="dateTime" id="dateTimeLabel">Task Date & time: </label>
+
+                <div class="dateTimeInput">
+                    <input type="date" name="dateTime" id="dateInput" required>
+                    <input type="time" name="dateTime" id="timeInput" required>
+                </div>
+            </div>
+
+            <div class="button-container">
+                <button type="reset" id="clearButton">Clear</button>
+                <button type="submit" id="submitButton">Add</button>
+            </div>
+
+        </form>
+
+        <section class="note-container" id="noteContainer">
+            <ul id="noteList">
+
+            </ul>
+        </section>
+
+    </section>
+    
+</body>
+
+</html>

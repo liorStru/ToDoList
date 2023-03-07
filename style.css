@@ -1,0 +1,217 @@
+/* page layout */
+html,
+body {
+    margin: 0%;
+    padding: 0%;
+    height: 100%;
+    background-image: url(assets/images/background-pic.jpg);
+    background-repeat: repeat-y;
+    background-size: cover;
+    background-position: center;
+}
+
+.layout-container {
+    display: grid;
+    justify-items: center;
+    height: 100%;
+}
+
+/* header styling */
+h1 {
+    font-family: handWritingFont;
+    letter-spacing: 2px;
+    padding-top: 15px;
+    font-size: 40px;
+    font-weight: 700;
+    color: rgb(234, 234, 199);
+    text-shadow: 3px 3px darkgoldenrod;
+}
+
+/* header and label font */
+@font-face {
+    font-family: handWritingFont;
+    src: url("assets/fonts/Dancing\ Script.ttf");
+}
+
+/* text area and note font */
+@font-face {
+    font-family: newFont;
+    src: url("assets/fonts/CaneletterSans_PersonalUse.otf");
+}
+
+/* form styling */
+form {
+    display: grid;
+    grid-template-rows: 55% 32% 13%;
+    background-image: url(assets/images/form-pic.jpg);
+    background-size: 70%;
+    border-radius: 15px;
+    padding: 3px;
+    height: 210px;
+    width: 30%;
+    text-align: center;
+    min-width: 230px;
+}
+
+label {
+    text-shadow: 1px 1px darkgoldenrod;
+    font-family: handWritingFont;
+    font-size: 22px;
+}
+
+label,
+textarea {
+    font-size: 18px;
+    font-weight: 550;
+}
+
+textarea {
+    font-family: newFont;
+}
+
+input,
+textarea,
+button {
+    background: none;
+    border-radius: 5px;
+    border: 1px solid;
+    border-color: darkgoldenrod;
+}
+
+#descriptionText {
+    resize: none;
+    width: 95%;
+    height: 70%;
+    padding: 10px;
+    padding-top: 5px;
+}
+
+input[name="dateTime"] {
+    width: 35%;
+    max-width: 100px;
+    height: 20px;
+    font-size: smaller;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20%;
+}
+
+#submitButton,
+#clearButton {
+    width: 20%;
+    font-size: small;
+    max-width: 22%;
+    height: 90%;
+}
+
+textarea:hover {
+    border: 2px solid;
+}
+
+button:hover,
+input:hover {
+    font-weight: 700;
+    border: 2px solid;
+    text-shadow: 1px 1px darkgoldenrod;
+}
+
+/* notes area styling */
+.note-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 95%;
+    min-height: 200px;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 5%;
+    margin-top: 20px;
+}
+
+/* note styling */
+li {
+    display: grid;
+    grid-template-rows: 12% 78% 10%;
+}
+
+li {
+    height: 190px;
+    width: 175px;
+    border-radius: 5px;
+    padding: 0px 5px 5px 10px;
+    word-wrap: break-word;
+    margin-bottom: 20px;
+    background-image: url(assets/images/note-pic.png);
+    background-position: center;
+}
+
+/* new note fade in */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn ease-in 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* new note scroll */
+#noteDescription {
+    overflow-y: scroll;
+    font-family: newFont;
+    font-size: 20px;
+}
+
+/* hide scroll */
+#noteDescription::-webkit-scrollbar {
+    display: none;
+}
+
+/* time a date styling */
+#noteTimeDate {
+    color: darkgoldenrod;
+    font-size: smaller;
+    font-weight: 620;
+}
+
+.far,
+.fa-regular {
+    color: black;
+}
+
+/* delete button styling*/
+#deleteButton {
+    height: 30px;
+    width: 25px;
+    background: none;
+    border: none;
+}
+
+#deleteButtonBox {
+    display: flex;
+    justify-content: flex-end;
+    opacity: 0;
+}
+
+img {
+    width: 18px;
+    height: 18px;
+}
+
+li:hover #deleteButtonBox {
+    opacity: 1;
+}
